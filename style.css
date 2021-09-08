@@ -1,0 +1,17 @@
+a{
+	text-decoration: none;
+}
+
+.lijst1{
+	text-align: center;
+	padding: 10px;
+	border: 1px solid black;
+	width: 200px;
+	margin: 0 auto;
+	cursor: pointer;
+
+}
+
+#lijst2{
+	text-align: center;
+}

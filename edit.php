@@ -1,3 +1,3 @@
 <?php
-    include('dbconnect.php');
+    include('db-connect.php');
 ?>
