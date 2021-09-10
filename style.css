@@ -15,8 +15,12 @@ a{
 #lijst2{
 	text-align: center;
 }
+.far {
+	transition: 0.3s;
+}
 
-.far{
-	margin-right: 5px;
-	
+.far:hover {	
+}
+
+.fas:hover {
 }
