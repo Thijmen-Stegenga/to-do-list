@@ -12,15 +12,29 @@ a{
 
 }
 
-#lijst2{
+.lijst2{
 	text-align: center;
 }
-.far {
+
+.listitems{
+	text-align: center;
+}
+
+.icons{
+	text-align: center;
+}
+
+.far{
 	transition: 0.3s;
+	
 }
 
 .far:hover {	
 }
 
 .fas:hover {
+}
+
+.tt{
+	text-align: center;
 }

@@ -22,15 +22,16 @@
 
 
 	 <?php
-	  $list = getList();
+	  $list = getList();  
 	  foreach ($list as $listitem){
             //var_dump($listitem); ?>
-            <h2><?php echo $listitem['name'] ?></h2>
-            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
-            <a href="update.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"></i></a>
+            <h2 class="listitems"><?php echo $listitem['name'] ?></h2>
+            <a href="update.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
+            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"></i></a>
 
             <?php
         }
+
         ?>
 	 	
 </body>

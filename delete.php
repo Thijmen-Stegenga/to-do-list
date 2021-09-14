@@ -1,15 +1,15 @@
 <?php
-    include('db-connect.php');
+     include("db-connect.php");
 
-    function deleteNames(){
+    function deleteList(){
+        $id = $_GET['id'];
         $conn = databaseConnection();
-        $query = $conn->prepare("DELETE FROM `to-do` (name) VALUES (:name) WHERE id = :id ");
-        $query->bindParam(":id" , $_POST['id']);
-        $query->bindParam(":name", $_POST['name']);
+        $query = $conn->prepare("DELETE FROM `to-do` WHERE id = :id ");
+        $query->bindParam(':id', $id);
         $query->execute();
+        
 
-        deleteNames();
-
-        //header( "Location: index.php" );
+        header( "Location: index.php" );
     }
+        deleteList();
 ?>

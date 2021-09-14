@@ -8,14 +8,6 @@
             return $list;
         }
 
-   function deleteList(){
-            $conn = databaseConnection();
-            $query = $conn->prepare("DELETE * FROM `to-do`");
-            $query->execute();
-            $deletelist = $query->fetchall();
-            return $deleteist;
-   }
-
 ?>
 
 
