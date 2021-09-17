@@ -20,14 +20,15 @@
 	</nav>
 	 <h1 class="lijst2">Your lists</h1>
 
-
 	 <?php
 	  $list = getList();  
 	  foreach ($list as $listitem){
             //var_dump($listitem); ?>
             <h2 class="listitems"><?php echo $listitem['name'] ?></h2>
-            <a href="update.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
-            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"></i></a>
+            <div class="item">
+	            <a href="updateTask.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
+	            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
+        	</div>
 
             <?php
         }
