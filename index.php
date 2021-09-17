@@ -19,14 +19,15 @@
 		<h1 class="lijst1"><a href="addTask.php">New list</a></h1>
 	</nav>
 	 <h1 class="lijst2">Your lists</h1>
+	 <div class="remy">
 
 	 <?php
 	  $list = getList();  
 	  foreach ($list as $listitem){
             //var_dump($listitem); ?>
-            <h2 class="listitems"><?php echo $listitem['name'] ?></h2>
             <div class="item">
-	            <a href="updateTask.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
+            	<h2 class="listitems"><?php echo $listitem['name'] ?></h2>
+	            <a href="updateForm.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
 	            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
         	</div>
 
@@ -34,6 +35,6 @@
         }
 
         ?>
-	 	
+	 	</div>
 </body>
 </html>
