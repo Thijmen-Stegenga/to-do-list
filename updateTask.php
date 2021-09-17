@@ -6,9 +6,9 @@
 	<title>Update List</title>
 </head>
 <body>
-		<form name="update" method="post" action="update.php">
+		<form name="update" method="get" action="update.php">
 			<div class="form-group d-flex justify-content-center">
-				<input type="hidden" name="id" value="<?=$id[id] ?>"/>
+				<input type="hidden" name="id" value="<?=$_GET['id'] ?>"/>
 				<label for="">Edit list name</label>
 				<input class="form-control w-50 " type="text" name="name" placeholder="Vul naam in" required><br>
 			</div>
