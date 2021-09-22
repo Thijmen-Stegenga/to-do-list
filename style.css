@@ -29,7 +29,17 @@ h2{
 	display: flex;
 	align-content: center;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+.flex{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.task{
+	padding: 10px;
+	border: 1px solid black;
 }
 
 .icons{
@@ -42,14 +52,12 @@ h2{
 
 .item{
 	text-align: center;
-	justify-content: center;
 	margin: 0 auto;
-	display: flex;
 	align-content: center;
-    align-items: center;
     border: solid black 2px;
     width: 30%;
     margin-left: 10px;
+    padding: 0 20px 20px;
 
 }
 

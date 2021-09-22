@@ -16,19 +16,34 @@
 </head>
 <body>
 	<nav>
-		<h1 class="lijst1"><a href="addTask.php">New list</a></h1>
+		<h1 class="lijst1"><a href="addList.php">New list</a></h1>
 	</nav>
 	 <h1 class="lijst2">Your lists</h1>
 	 <div class="remy">
 
 	 <?php
-	  $list = getList();  
+	  $list = getList();
+	 // $tasks = getTasks();  
 	  foreach ($list as $listitem){
             //var_dump($listitem); ?>
             <div class="item">
-            	<h2 class="listitems"><?php echo $listitem['name'] ?></h2>
-	            <a href="updateForm.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
-	            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
+            	<div class="flex">
+	            	<h2 class="listitems"><?php echo $listitem['name'] ?></h2>
+		            <a href="updateForm.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
+		            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
+		            <a href="addTask.php?id=<?php echo $listitem['id'] ?> "class="btn btn-dark">+</a>
+	        	</div>
+
+	            <?php foreach (getTasks($listitem['id']) as $task){ ?>
+	            <div class="task">
+	            	<h3 class=""><?php echo $task['name'] ?></h3>
+	            	<a href="updateTaskForm.php?id=<?php echo $task['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
+		            <a href="deleteTask.php?id=<?php echo $task['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
+	            </div>
+	            <?php
+	            }
+	             ?>
+	            
         	</div>
 
             <?php

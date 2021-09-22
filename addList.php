@@ -9,10 +9,9 @@
 	<title>Add list</title>
 </head>
 <body>
-	<h1>Voeg een taak toe</h1>
-		<form name="create" method="post" action="createTask.php">
-			<label for="">task name</label>
-			<input type="hidden" name="listid" value="<?= $_GET['id'] ?>">
+	<h1>Voeg een lijst toe</h1>
+		<form name="create" method="post" action="create.php">
+			<label for="">List name</label>
 			<input type="text" name="name" placeholder="Vul naam in"><br>
 			<input type="submit">
 		</form>
