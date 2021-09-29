@@ -67,4 +67,28 @@ h2{
 .fas:hover {
 }
 
+.mr{
+	margin-right: 10px;
+}
+.status{
+	width: 10px;
+	height: 10px;
+	border-radius: 100px;
+	display: inline-block;
+}
 
+.red{
+	background-color: red;
+}
+
+.orange{
+	background-color: orange;
+}
+
+.green{
+	background-color: green;
+}
+
+.grey{
+	background-color: grey;
+}

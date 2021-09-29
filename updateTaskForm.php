@@ -12,6 +12,12 @@
 				<label for="">Edit Task name</label>
 				<input class="form-control w-50 " type="text" name="name" placeholder="Vul naam in" required><br>
 			</div>
+			<select name="color">
+				<option value="red">red</option>
+				<option value="orange">orange</option>
+				<option value="green">green</option>
+				<option value="grey">grey</option>
+			</select>
 			<input type="submit" class="btn btn-info">
 		</form>
 
