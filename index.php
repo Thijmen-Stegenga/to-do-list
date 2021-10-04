@@ -32,6 +32,13 @@
 		            <a href="delete.php?id=<?php echo $listitem['id'] ?> "class="mr"><i class="fas fa-trash-alt"0></i></a>
 		            <a href="addTask.php?id=<?php echo $listitem['id'] ?> "class="mr"><i class="fas fa-file-medical"></i></a>
 	        	</div>
+	        	<div>
+	        	<label for="color">Sort by Color:</label>
+					<select name="color">
+						<option value="red">0-120 min</option>
+						<option value="orange">120-0 min</option>
+					</select>
+	        	</div>
 
 	            <?php foreach (getTasks($listitem['id']) as $task){ ?>
 	            <div class="task">

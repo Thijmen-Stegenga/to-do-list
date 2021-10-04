@@ -13,10 +13,11 @@
 				<input class="form-control w-50 " type="text" name="name" placeholder="Vul naam in" required><br>
 			</div>
 			<select name="color">
-				<option value="red">red</option>
-				<option value="orange">orange</option>
-				<option value="green">green</option>
-				<option value="grey">grey</option>
+				<option value="red">red (0-30 min)</option>
+				<option value="orange">orange (30-60 min)</option>
+				<option value="yellow">yellow (60-120 min)
+				<option value="green">green (120 of meer min)</option>
+				<option value="grey">grey (geen indicatie)</option>
 			</select>
 			<input type="submit" class="btn btn-info">
 		</form>

@@ -71,8 +71,8 @@ h2{
 	margin-right: 10px;
 }
 .status{
-	width: 10px;
-	height: 10px;
+	width: 12px;
+	height: 12px;
 	border-radius: 100px;
 	display: inline-block;
 }
@@ -83,6 +83,10 @@ h2{
 
 .orange{
 	background-color: orange;
+}
+
+.yellow{
+	background-color: yellow;
 }
 
 .green{
