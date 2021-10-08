@@ -23,6 +23,9 @@
 				<option value="green">green (120 of meer min)</option>
 				<option value="grey">grey (geen indicatie)</option>
 			</select>
+		
+				
+			</form>
 			<input type="submit">
 		</form>
 </body>

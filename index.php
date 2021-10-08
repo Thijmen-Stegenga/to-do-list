@@ -35,8 +35,8 @@
 	        	<div>
 	        	<label for="color">Sort by Color:</label>
 					<select name="color">
-						<option value="red">0-120 min</option>
-						<option value="orange">120-0 min</option>
+						<option value="sortForm">A-Z </option>
+						<option value="sortForm">Z-A</option>
 					</select>
 	        	</div>
 
