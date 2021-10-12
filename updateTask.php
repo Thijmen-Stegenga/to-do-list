@@ -6,10 +6,12 @@
         $id = $_GET['id'];
         $name = $_GET['name'];
         $color = $_GET['color'];
-        $query = $conn->prepare("UPDATE `tasks` SET  `name` = :name, `color` = :color WHERE id = :id ");
+        $duration = $_GET['duration'];
+        $query = $conn->prepare("UPDATE `tasks` SET  `name` = :name, `color` = :color, `duration` = :duration  WHERE id = :id ");
         $query->bindParam(':id', $id);
         $query->bindParam(':name', $name);
-        $query->bindParam(":color", $color);
+        $query->bindParam(':color', $color);
+        $query->bindParam(':duration', $duration);
         $query->execute();
         
         header( "Location: index.php" );

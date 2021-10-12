@@ -33,16 +33,17 @@
 		            <a href="addTask.php?id=<?php echo $listitem['id'] ?> "class="mr"><i class="fas fa-file-medical"></i></a>
 	        	</div>
 	        	<div>
-	        	<label for="color">Sort by Color:</label>
-					<select name="color">
-						<option value="sortForm">A-Z </option>
-						<option value="sortForm">Z-A</option>
-					</select>
-	        	</div>
+		        	<label for="duration">Sort by Duration:</label>
+						<select name="duration">
+							<option value="sortForm">Time up!</option>
+							<option value="sortForm">Time down!</option>
+						</select>
+		        </div>
 
 	            <?php foreach (getTasks($listitem['id']) as $task){ ?>
 	            <div class="task">
 	            	<h3 class=""><?php echo $task['name'] ?></h3>
+	            	<h4 class="">Minuten :<?php echo $task ['duration'] ?> </h4>
 	            	<a href="updateTaskForm.php?id=<?php echo $task['id'] ?> "class="btn btn-dark"><i class="far fa-edit"></i></i></a>
 		            <a href="deleteTask.php?id=<?php echo $task['id'] ?> "class="btn btn-dark"><i class="fas fa-trash-alt"0></i></a>
 		            <div class="status <?php echo $task['color'] ?>">

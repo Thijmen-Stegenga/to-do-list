@@ -11,15 +11,16 @@
 				<input type="hidden" name="id" value="<?=$_GET['id'] ?>"/>
 				<label for="">Edit Task name</label>
 				<input class="form-control w-50 " type="text" name="name" placeholder="Vul naam in" required><br>
+				<label for="">Duration</label>
+				<input type="text" name="duration"  placeholder="Vul tijd in (min)"><br><br>
 			</div>
 			<select name="color">
-				<option value="blue">blue (0-30 min)</option>
-				<option value="green">green (30-60 min)</option>
-				<option value="orange">orange (60-120 min)</option>
-				<option value="red">red (120 of meer min)</option>
-				<option value="yellow">yellow (no indication)</option>
+				<option value="red">red (going to begin)</option>
+				<option value="orange">orange (almost done)</option>
+				<option value="green">(finished ready to check)</option>
 			</select>
-			<input type="submit" class="btn btn-info">
+			
+			<input type="submit">
 		</form>
 
 </body>
