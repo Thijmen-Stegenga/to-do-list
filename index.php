@@ -6,7 +6,7 @@
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      // The request is using the POST method
 		$message = 'gepost'; 
-		//$list = getListWithSortedTasks();
+		$list = sortDuration();
 	}
 	else{
 		$message = 'geget'; 
@@ -57,8 +57,8 @@
 		            <a href="addTask.php?id=<?php echo $listitem['id'] ?> "class="mr"><i class="fas fa-file-medical"></i></a>
 	        	</div>
 
-	            <?php foreach (getTasks($listitem['id']) //($listitem['tasks']
-	            as $task){ ?>
+	            <?php foreach (getTasks($listitem['id']) as $task){ ?>
+	            ($listitem['tasks']
 	            <div class="task">
 	            	<h3 class=""><?php echo $task['name'] ?></h3>
 	            	<h4 class="">Minuten :<?php echo $task ['duration'] ?> </h4>

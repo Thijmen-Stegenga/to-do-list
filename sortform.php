@@ -1,17 +1,16 @@
 	<?php
 		function sortStatus(){
 			$conn = databaseConnection();
-			$query = $conn->prepare(" SELECT * FROM `tasks` ORDER BY :color DESC ");
-	        $query->bindParam(":color", $_POST['color']);
+			$query = $conn->prepare(" SELECT * FROM `to-do` left JOIN tasks on `tasks` .`listid` = `to-do`.`id` ORDER BY `color` ");
 	        $query->execute();
 		}
-
+		
 		function sortDuration(){
 			$conn = databaseConnection();
-			$query = $conn->prepare(" SELECT * FROM `tasks` ORDER BY 'duration' :sort ");
-	        $query->bindParam(":sort", $_POST['sort']);
+			$query = $conn->prepare("SELECT * FROM `to-do` left JOIN tasks on `tasks` .`listid` = `to-do`.`id` ORDER BY `duration` ");
 	        $query->execute();
 	        $sortedlist = $query->fetchall();
 	        return $sortedlist;
-		}
+		}		
+		
 	?>
