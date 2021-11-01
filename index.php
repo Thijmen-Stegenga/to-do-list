@@ -6,7 +6,8 @@
 	if ($_SERVER['REQUEST_METHOD'] === 'POST') {
      // The request is using the POST method
 		$message = 'gepost'; 
-		$list = sortDuration();
+		$list = sortDuration($_POST['sort']);
+		//$result = sortDuration($_POST['sort']);
 	}
 	else{
 		$message = 'geget'; 
@@ -36,12 +37,17 @@
 		<div>
 			<label for="duration">Sort by Duration:</label>
 			<select name="sort">
+				<option value="ASC">Color ASC</option>
+				<option value="DESC">Color DESC</option>
 				<option value="ASC">Time up!</option>
 				<option value="DESC">Time down!</option>
+
 			</select>
 		</div>
-			<button type="submit">Sort</button>
+			<button type="submit"value="update">Sort</button>
 	</form>
+
+
 
 	 <div class="remy">
 
@@ -58,7 +64,6 @@
 	        	</div>
 
 	            <?php foreach (getTasks($listitem['id']) as $task){ ?>
-	            ($listitem['tasks']
 	            <div class="task">
 	            	<h3 class=""><?php echo $task['name'] ?></h3>
 	            	<h4 class="">Minuten :<?php echo $task ['duration'] ?> </h4>
